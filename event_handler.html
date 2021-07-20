@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+  <button onclick="prev()"> Prev </button>
+  <img id="Slider" src="/Users/reema/Desktop/HTML/flower1.jpeg" width="200px" height="100px"/>
+  <button onclick="next()">Next</button>
+</div>
+<script>
+  var images = [
+  "/Users/reema/Desktop/HTML/flower1.jpeg",
+  "/Users/reema/Desktop/HTML/flower2.jpeg",
+  "/Users/reema/Desktop/HTML/flower3.jpeg"
+  ]
+  var num=0;
+
+  function next() {
+    var Slider = document.getElementById('Slider');
+    num++;
+    if (num>=images.length) {
+      num = 0;
+    }
+    Slider.src=images[num];
+  }
+
+
+  function prev() {
+    var Slider = document.getElementById('Slider');
+    num--;
+    if(num<images.length) {
+      num = images.length-1;
+    }
+    Slider.src=images[num];
+  }
+</script>
+</body>
+</html>
