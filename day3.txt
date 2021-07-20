@@ -1,0 +1,26 @@
+Events
+
+The onload and onunload events are triggered when the user enters or leaves the page.
+These can be useful when performing actions after the page is loaded.
+
+<body onload="doSomething()">
+
+
+Event Propagation:
+
+
+There are two ways of event propagation in the HTML DOM: bubbling and capturing.
+
+Event propagation allows for the definition of the element order when an event occurs.
+
+In bubbling, the innermost element's event is handled first and then the outer element's
+event is handled. The <p> element's click event is handled first, followed by
+the <div> element's click event.
+
+In capturing, the outermost element's event is handled first and then the inner.
+The <div> element's click event is handled first, followed by the <p> element's click event.
+
+# addEventListener(event, function, useCapture)
+
+By usinf the useCapture we can specify the propogation type. By default, it's false,
+which means, Bubbling will get called.

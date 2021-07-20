@@ -1,0 +1,150 @@
+Javascript:
+
+code is written in <script> ... </script>
+
+* document.write() function is used to write text into our HTML document.
+
+CONSOLE:
+The console is part of the web browser and allows you to log messages, run
+JavaScript code, and see errors and warnings.
+
+* console.log("Hello from console!");
+
+Variables:
+Variables are containers for storing data values. The value of a variable can
+change throughout the program.
+
+var x=10;
+
+- JavaScript is case sensitive.
+
+Rules for Javascript:
+
+- The first character of a variable name must be a letter, underscore (_),
+or a dollar sign ($) (Subsequent characters can be letters, digits, underscores,
+ or dollar signs).
+- The first character of a variable name can’t be a number.
+- Variable names can’t include a mathematical or logical operator in their name.
+ For instance, 2*something or this+that;
+- Variable names can’t contain spaces.
+- You’re not allowed to use any special symbols, like my#num, num%, etc.
+
+COMMENTS:
+Any code after a double slash //, or between /* and */, is treated as a comment,
+ and will be ignored, and not executed.
+
+ DATA TYPES:
+ - num
+ - string (You can get double quotes inside of double quotes using the escape
+ character like this: \" or \' inside of single quotes.)
+
+ ESCAPE CHARACTER:
+
+ \' - Single quote
+ \" - Double quotes
+ \\ - Backslash
+ \n - new line
+ \r - carriage return
+ \t - tab
+ \b - backspace
+ \f - formfeed
+
+ && - Returns true, if both operands are true
+ !! - Returns, true, if one of the operand is true
+ ! - Returns True is the operands is false, and false, if the operand is True
+
+ Conditional (Ternery operator):
+
+ variable = (condition) ? value1: value2
+
+ The if Statement:
+
+ if (condition) {
+   statements
+}
+
+
+The Switch Statement:
+
+switch (expression) {
+  case n1:
+     statements
+     break;
+  case n2:
+     statements
+     break;
+  default:
+     statements
+}
+
+
+LOOPS:
+
+JavaScript has three types of loops: for, while, and do while.
+
+for Loop:
+
+for (statement 1; statement 2; statement 3) {
+   code block to be executed
+}
+
+Statement 1 is executed before the loop (the code block) starts.
+Statement 2 defines the condition for running the loop (the code block).
+Statement 3 is executed each time after the loop (the code block) has been executed.
+
+document.write(i + "<br />"); // for output in new line
+
+While Loop:
+
+while (condition) {
+   code block
+}
+
+DO WHILE LOOP:
+
+do {
+   code block
+}
+while (condition);
+
+CONTINUE STATEMENT:
+
+Unlike the break statement, the continue statement breaks only one iteration
+in the loop, and continues with the next iteration.
+
+
+
+EXAMPLE: The Snail in the Well
+The snail climbs up 7 feet each day and slips back 2 feet each night.
+How many days will it take the snail to get out of a well with the given depth?
+
+Sample Input:
+31
+
+Sample Output:
+6
+
+Explanation: Let's break down the distance the snail covers each day:
+Day 1: 7-2=5
+Day 2: 5+7-2=10
+Day 3: 10+7-2=15
+Day 4: 15+7-2=20
+Day 5: 20+7-2=25
+Day 6: 25+7=32
+So, on Day 6 the snail will reach 32 feet and get out of the well at day, without slipping back that night.
+
+for(i=2,d=0;i<depth;i=i+7) {
+if(i<depth) {
+i=i-2,d++;
+}
+console.log(d);
+}
+
+for (i = 2,d=0; i < depth; i = i+7) { //i for how far snail moved, and d for day.
+    if (i < depth ) {
+    i = i - 2,d++
+    }
+
+}
+console.log(d);
+}
